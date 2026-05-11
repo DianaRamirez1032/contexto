@@ -7,32 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta content="Codescandy" name="author" />
   <title>Contratos</title>
-  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="node_modules/swiper/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <!-- Favicon icon-->
-  <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-icon-57x57.png" />
-  <link rel="apple-touch-icon" sizes="60x60" href="../assets/images/favicon/apple-icon-60x60.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="../assets/images/favicon/apple-icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="76x76" href="../assets/images/favicon/apple-icon-76x76.png" />
-  <link rel="apple-touch-icon" sizes="114x114" href="../assets/images/favicon/apple-icon-114x114.png" />
-  <link rel="apple-touch-icon" sizes="120x120" href="../assets/images/favicon/apple-icon-120x120.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="../assets/images/favicon/apple-icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="152x152" href="../assets/images/favicon/apple-icon-152x152.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-icon-180x180.png" />
-  <link rel="icon" type="image/png" sizes="192x192" href="../assets/images/favicon/android-icon-192x192.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="96x96" href="../assets/images/favicon/favicon-96x96.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="57x57" href="src/assets/images/favicon/apple-icon-57x57.png" />
+  <link rel="apple-touch-icon" sizes="60x60" href="src/assets/images/favicon/apple-icon-60x60.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="src/assets/images/favicon/apple-icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="76x76" href="src/assets/images/favicon/apple-icon-76x76.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="src/assets/images/favicon/apple-icon-114x114.png" />
+  <link rel="apple-touch-icon" sizes="120x120" href="src/assets/images/favicon/apple-icon-120x120.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="src/assets/images/favicon/apple-icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="152x152" href="src/assets/images/favicon/apple-icon-152x152.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="src/assets/images/favicon/apple-icon-180x180.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="src/assets/images/favicon/android-icon-192x192.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="src/assets/images/favicon/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="src/assets/images/favicon/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="src/assets/images/favicon/favicon-16x16.png" />
 
   <meta name="msapplication-TileColor" content="#ffffff" />
-  <meta name="msapplication-TileImage" content="../assets/images/favicon/ms-icon-144x144.png" />
+  <meta name="msapplication-TileImage" content="src/assets/images/favicon/ms-icon-144x144.png" />
   <meta name="theme-color" content="#ffffff" />
   <!-- Color modes -->
-  <script src="../assets/js/vendors/color-modes.js"></script>
+  <script src="../src/assets/js/vendors/color-modes.js"></script>
   <script>
     if (localStorage.getItem("sidebarExpanded") === "false") {
       document.documentElement.classList.add("collapsed");
@@ -47,12 +48,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="../node_modules/simplebar/dist/simplebar.min.css" />
-  <link rel="stylesheet" href="../node_modules/@tabler/icons-webfont/tabler-icons.min.css" />
+  <link rel="stylesheet" href="node_modules/simplebar/dist/simplebar.min.css" />
+  <link rel="stylesheet" href="node_modules/@tabler/icons-webfont/tabler-icons.min.css" />
 
   <!-- Theme CSS -->
   <!-- build:css ./assets/css/theme.min.css -->
-  <link rel="stylesheet" href="../assets/css/theme.css" />
+  <link rel="stylesheet" href="src/assets/css/theme.css" />
   <!-- endbuild -->
 </head>
 
@@ -101,7 +102,7 @@
       <ul class="navbar-nav flex-column">
         <!-- Dashboard -->
         <li class="nav-item">
-          <a class="nav-link" href="../dashboard/dashboard.php">
+          <a class="nav-link" href="src/dashboard/dashboard.php">
             <span class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -116,7 +117,7 @@
         </li>
         <!-- Contratos -->
         <li class="nav-item">
-          <a class="nav-link" href="../contratos/contratos.php">
+          <a class="nav-link">
             <span class="nav-icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
                 stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
@@ -183,14 +184,29 @@
                     <h4 class="fw-bold mb-0">Contratos</h4>
                     <small class="text-muted">Administra los contratos del sistema</small>
                   </div>
-                  <button class="btn btn-primary" onclick="window.location.href = 'crearContrato.php'">
+                  <button class="btn btn-primary" onclick="window.location.href = 'src/contratos/crearContrato.php'">
                     + Nuevo Contrato
                   </button>
                 </div>
                 <!-- Barra de búsqueda y filtros -->
                 <div class="d-flex justify-content-between align-items-center mb-3">
-                  <input type="text" class="form-control w-50" placeholder="Buscar contratos..." />
-                  <button class="btn btn-outline-secondary">Filtros</button>
+                  <form method="GET" action="index.php" class="d-flex w-100">
+                    <input type="hidden" name="controller" value="Contrato">
+                    <input type="hidden" name="action" value="listar">
+
+                    <input type="text" name="search" class="form-control w-50" 
+                          placeholder="Buscar contratos..." 
+                          value="<?= htmlspecialchars($_GET['search'] ?? '') ?>" />
+
+                    <select name="estado" class="form-select w-25 ms-2">
+                      <option value="">Todos</option>
+                      <option value="Borrador" <?= ($_GET['estado'] ?? '') == 'Borrador' ? 'selected' : '' ?>>Borrador</option>
+                      <option value="Firmado" <?= ($_GET['estado'] ?? '') == 'Firmado' ? 'selected' : '' ?>>Firmado</option>
+                      <option value="Validado" <?= ($_GET['estado'] ?? '') == 'Validado' ? 'selected' : '' ?>>Validado</option>
+                    </select>
+
+                    <button type="submit" class="btn btn-outline-secondary ms-2">Filtrar</button>
+                  </form>
                 </div>
                 <!-- Tabla -->
                 <div class="table-responsive">
@@ -205,70 +221,66 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>Contrato de Prestación de Servicios</td>
-                        <td>
-                          <span class="badge bg-secondary">Borrador</span>
-                        </td>
-                        <td>01/05/2026</td>
-                        <td>
-                          <button class="btn btn-sm btn-info">Ver</button>
-                          <button class="btn btn-sm btn-warning">
-                            Editar
-                          </button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>Acuerdo de Confidencialidad</td>
-                        <td><span class="badge bg-success">Firmado</span></td>
-                        <td>02/05/2026</td>
-                        <td>
-                          <button class="btn btn-sm btn-info">Ver</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>Contrato de Suministro</td>
-                        <td>
-                          <span class="badge bg-primary">Validado</span>
-                        </td>
-                        <td>03/05/2026</td>
-                        <td>
-                          <button class="btn btn-sm btn-info">Ver</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>Contrato de Licencia</td>
-                        <td>
-                          <span class="badge bg-secondary">Borrador</span>
-                        </td>
-                        <td>04/05/2026</td>
-                        <td>
-                          <button class="btn btn-sm btn-info">Ver</button>
-                          <button class="btn btn-sm btn-warning">
-                            Editar
-                          </button>
-                        </td>
-                      </tr>
+                      <?php if (!empty($contratos)): ?>
+                        <?php foreach ($contratos as $contrato): ?>
+                          <tr>
+                            <td><?= $contrato['id_contrato'] ?></td>
+                            <td><?= htmlspecialchars($contrato['titulo_contrato']) ?></td>
+                            <td>
+                              <span class="badge 
+                                <?= $contrato['estado_contrato'] == 'Borrador' ? 'bg-warning-light' : 
+                                  ($contrato['estado_contrato'] == 'Firmado' ? 'bg-success' : 'bg-primary') ?>">
+                                <?= $contrato['estado_contrato'] ?>
+                              </span>
+                            </td>
+                            <td><?= date("d/m/Y", strtotime($contrato['fecha_contrato'])) ?></td>
+                            <td>
+                              <!-- Botón Ver con icono de ojo -->
+                              <button class="btn btn-sm btn-info" 
+                                      onclick="window.location.href='index.php?controller=Contrato&action=ver&id=<?= $contrato['id_contrato'] ?>'">
+                                <i class="bi bi-eye"></i>
+                              </button>
+
+                              <!-- Botón Editar con icono de lápiz -->
+                              <button class="btn btn-sm btn-warning"
+                                      onclick="window.location.href='index.php?controller=Contrato&action=editar&id=<?= $contrato['id_contrato'] ?>'">
+                                <i class="bi bi-pencil"></i>
+                              </button>
+                            </td>
+                          </tr>
+                        <?php endforeach; ?>
+                      <?php else: ?>
+                        <tr>
+                          <td colspan="5" class="text-center text-muted">No se encontraron contratos</td>
+                        </tr>
+                      <?php endif; ?>
                     </tbody>
                   </table>
                 </div>
-
                 <!-- Paginación -->
                 <nav>
                   <ul class="pagination justify-content-center">
-                    <li class="page-item disabled">
-                      <a class="page-link">Anterior</a>
+                    <li class="page-item <?= $pagina <= 1 ? 'disabled' : '' ?>">
+                      <a class="page-link" 
+                        href="index.php?controller=Contrato&action=listar&page=<?= $pagina-1 ?>&search=<?= urlencode($_GET['search'] ?? '') ?>&estado=<?= urlencode($_GET['estado'] ?? '') ?>">
+                        Anterior
+                      </a>
                     </li>
-                    <li class="page-item active">
-                      <a class="page-link">1</a>
-                    </li>
-                    <li class="page-item"><a class="page-link">2</a></li>
-                    <li class="page-item">
-                      <a class="page-link">Siguiente</a>
+
+                    <?php for ($i = 1; $i <= $totalPaginas; $i++): ?>
+                      <li class="page-item <?= $i == $pagina ? 'active' : '' ?>">
+                        <a class="page-link" 
+                          href="index.php?controller=Contrato&action=listar&page=<?= $i ?>&search=<?= urlencode($_GET['search'] ?? '') ?>&estado=<?= urlencode($_GET['estado'] ?? '') ?>">
+                          <?= $i ?>
+                        </a>
+                      </li>
+                    <?php endfor; ?>
+
+                    <li class="page-item <?= $pagina >= $totalPaginas ? 'disabled' : '' ?>">
+                      <a class="page-link" 
+                        href="index.php?controller=Contrato&action=listar&page=<?= $pagina+1 ?>&search=<?= urlencode($_GET['search'] ?? '') ?>&estado=<?= urlencode($_GET['estado'] ?? '') ?>">
+                        Siguiente
+                      </a>
                     </li>
                   </ul>
                 </nav>

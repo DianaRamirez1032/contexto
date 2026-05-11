@@ -13,11 +13,13 @@ class UsuarioController {
 
             if ($result) {
                 session_start();
-                $_SESSION["usuario"] = $result["email"];
+                // Guardamos tanto el id como el email
+                $_SESSION["usuario_id"] = $result["id_usuario"];
+                $_SESSION["usuario_email"] = $result["email_usuario"];
+
                 header("Location: src/dashboard/dashboard.php");
             } else {
                 $error = "Credenciales incorrectas";
-                echo $result;
                 include "../Views/src/logIn.php";
             }
         } else {

@@ -7,7 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta content="Codescandy" name="author">
   <title>Dasher Free - Responsive Bootstrap 5 Admin Dashboard</title>
-  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -47,8 +46,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="../node_modules/simplebar/dist/simplebar.min.css" />
-  <link rel="stylesheet" href="../node_modules/@tabler/icons-webfont/tabler-icons.min.css" />
 
   <!-- Theme CSS -->
   <!-- build:css ./assets/css/theme.min.css -->
@@ -117,11 +114,12 @@
         </li>
         <!-- Contratos -->
         <li class="nav-item">
-          <a class="nav-link" href="../contratos/contratos.php">
+          <a class="nav-link" href="../../index.php?controller=Contrato&action=listar">
             <span class="nav-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-                class="icon icon-tabler icon-tabler-file-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" 
+                  viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                  class="icon icon-tabler icon-tabler-file-text">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                 <path d="M14 3v4a1 1 0 0 0 1 1h4" />
                 <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2z" />
@@ -1613,8 +1611,6 @@
   </div>
 
   <!-- Libs JS -->
-  <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="./node_modules/simplebar/dist/simplebar.min.js"></script>
 
   <!-- Theme JS -->
   <!-- build:js ./assets/js/theme.min.js -->
@@ -1638,14 +1634,8 @@
 
   <!-- jsvectormap -->
   <script src="./assets/js/vendors/sidebarnav.js"></script>
-  <script src="./node_modules/jsvectormap/dist/js/jsvectormap.min.js"></script>
-  <script src="./node_modules/jsvectormap/dist/maps/world.js"></script>
-  <script src="./node_modules/jsvectormap/dist/maps/world-merc.js"></script>
-  <script src="./node_modules/apexcharts/dist/apexcharts.min.js"></script>
   <script src="./assets/js/vendors/chart.js"></script>
-  <script src="./node_modules/choices.js/public/assets/scripts/choices.min.js"></script>
   <script src="./assets/js/vendors/choice.js"></script>
-  <script src="./node_modules/swiper/swiper-bundle.min.js"></script>
   <script src="./assets/js/vendors/swiper.js"></script>
 </body>
 

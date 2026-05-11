@@ -7,12 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta content="Codescandy" name="author" />
   <title>Contratos</title>
-  <link rel="stylesheet" href="../node_modules/swiper/swiper-bundle.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <!-- Favicon icon-->
   <link rel="apple-touch-icon" sizes="57x57" href="../assets/images/favicon/apple-icon-57x57.png" />
   <link rel="apple-touch-icon" sizes="60x60" href="../assets/images/favicon/apple-icon-60x60.png" />
@@ -47,10 +47,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;500;600;700;800&display=swap" />
-  <link rel="stylesheet" href="../node_modules/simplebar/dist/simplebar.min.css" />
-  <link rel="stylesheet" href="../node_modules/@tabler/icons-webfont/tabler-icons.min.css" />
-
-  <!-- Theme CSS -->
   <!-- build:css ./assets/css/theme.min.css -->
   <link rel="stylesheet" href="../assets/css/theme.css" />
   <!-- endbuild -->
@@ -174,27 +170,33 @@
       <!-- row -->
       <div class="row mb-6 g-6">
         <div class="col-xl-12 col-lg-6">
-          <div class="container my-5">
-            <h3 class="fw-bold mb-4">Nuevo Contrato</h3>
-
-            <form method="POST" action="guardarContrato.php">
-              <!-- Título -->
+          <!-- Encabezado -->
+          <div class="row mb-4">
+            <div class="d-flex justify-content-between align-items-center w-100">
+              <div>
+                <h3 class="fw-bold mb-0">Nuevo Contrato</h3>
+                <p class="text-muted mb-0">Complete la información del nuevo contrato</p>
+              </div>
+              <a href="contratos.php" class="btn btn-outline-secondary">Cancelar</a>
+            </div>
+          </div>
+          <hr>
+          <!-- Formulario -->
+          <form method="POST" action="../../index.php?controller=Contrato&action=guardar" class="row mb-4">
+            <!-- Título -->
+            <div class="col-md-8">
               <div class="mb-3">
-                <label for="titulo" class="form-label">Título del contrato</label>
+                <label for="titulo" class="form-label fw-bold">Título del contrato <span style="color:red">*</span></label>
                 <input type="text" class="form-control" id="titulo" name="titulo"
                   placeholder="Ej. Contrato de Prestación de Servicios" required />
               </div>
-
-              <!-- Descripción -->
+            </div>
+            <!-- Proveedor de nube -->
+            <div class="col-md-4">
               <div class="mb-3">
-                <label for="descripcion" class="form-label">Descripción / Contenido</label>
-                <textarea class="form-control" id="descripcion" name="descripcion" rows="4"
-                  placeholder="Ingrese el contenido o descripción del contrato" required></textarea>
-              </div>
-
-              <!-- Proveedor de nube -->
-              <div class="mb-3">
-                <label for="proveedor" class="form-label">Proveedor de Nube</label>
+                <label for="proveedor" class="form-label fw-bold">
+                  Proveedor de Nube <span style="color:red">*</span>
+                </label>
                 <select class="form-select" id="proveedor" name="proveedor" required>
                   <option value="">Seleccione un proveedor</option>
                   <option value="aws">AWS</option>
@@ -202,47 +204,143 @@
                   <option value="gcp">Google Cloud</option>
                 </select>
               </div>
-
-              <!-- Información del proveedor -->
-              <div class="row mb-3">
-                <div class="col-md-4">
-                  <label for="region" class="form-label">Región</label>
-                  <input type="text" class="form-control" id="region" name="region" />
-                </div>
-                <div class="col-md-4">
-                  <label for="sensibles" class="form-label">Permite datos sensibles</label>
-                  <select class="form-select" id="sensibles" name="sensibles">
-                    <option value="si">Sí</option>
-                    <option value="no">No</option>
-                  </select>
-                </div>
-                <div class="col-md-4">
-                  <label for="ubicacion" class="form-label">Ubicación</label>
-                  <input type="text" class="form-control" id="ubicacion" name="ubicacion" />
-                </div>
-              </div>
-
-              <!-- Partes del contrato -->
-              <h5 class="mt-4">Partes del contrato</h5>
+            </div>
+            <!-- Descripción -->
+            <div class="col-md-8">
               <div class="mb-3">
-                <input type="text" class="form-control mb-2" placeholder="Nombre del cliente" name="cliente" />
-                <input type="text" class="form-control mb-2" placeholder="Correo del cliente" name="correo_cliente" />
-                <input type="text" class="form-control mb-2" placeholder="Nombre del proveedor"
-                  name="proveedor_nombre" />
-                <input type="text" class="form-control mb-2" placeholder="Correo del proveedor"
-                  name="correo_proveedor" />
+                <label for="descripcion" class="form-label fw-bold">Descripción / Contenido <span style="color:red">*</span></label>
+                <textarea class="form-control" id="descripcion" name="descripcion" rows="6"
+                  placeholder="Ingrese el contenido o descripción del contrato" required></textarea>
               </div>
-
-              <!-- Botón guardar -->
-              <button type="submit" class="btn btn-primary">
-                Guardar Contrato
+            </div>
+            <!-- Información del proveedor como card morada -->
+            <div class="col-md-4">
+              <label class="form-label fw-bold">Información del proveedor</label>
+              <div class="card mb-4" style="background-color:#c2a5f8c2;">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <p class="mb-1">Región: <span id="region-info">-</span></p>
+                    </div>
+                    <div class="col-md-12">
+                      <p class="mb-1">Permite datos sensibles: <span id="sensibles-info">-</span></p>
+                    </div>
+                    <div class="col-md-12">
+                      <p class="mb-1">Ubicación: <span id="ubicacion-info">-</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Partes del contrato -->
+            <h5 class="mt-4">Partes del contrato </h5>
+            <table class="table table-bordered" id="tabla-partes">
+              <thead class="table-light">
+                <tr>
+                  <th>Usuario</th>
+                  <th>Rol</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="text" class="form-control form-control-sm" name="usuarios[0][nombre]" placeholder="Nombre y correo" required>
+                  </td>
+                  <td>
+                    <select class="form-select form-select-sm" name="usuarios[0][rol]" required>
+                      <option value="Cliente">Cliente</option>
+                      <option value="Proveedor">Proveedor</option>
+                    </select>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-sm btn-danger eliminar-fila"><i class="bi bi-trash"></i></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Botón agregar usuario estilo texto -->
+            <div class="col-md-12">
+              <button type="button" id="agregar-usuario" class="btn btn-light text-primary mb-3">
+                <i class="bi bi-person-plus"></i> Agregar usuario
               </button>
-            </form>
-          </div>
+            </div>
+            <!-- Botones de acción -->
+            <div class="d-flex justify-content-end gap-2">
+              <button type="submit" class="btn btn-primary">
+                <i class="bi bi-save"></i>    Guardar Contrato
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
   </div>
-</body>
+  <script>
+    const proveedorSelect = document.getElementById("proveedor");
 
+    const proveedorData = {
+      aws: {
+        region: "us-east-1",
+        sensibles: "Sí",
+        ubicacion: "Virginia, USA"
+      },
+      azure: {
+        region: "eastus",
+        sensibles: "No",
+        ubicacion: "Washington, USA"
+      },
+      gcp: {
+        region: "us-central1",
+        sensibles: "Sí",
+        ubicacion: "Iowa, USA"
+      }
+    };
+
+    proveedorSelect.addEventListener("change", function () {
+      const value = this.value;
+      if (proveedorData[value]) {
+        document.getElementById("region-info").textContent = proveedorData[value].region;
+        document.getElementById("sensibles-info").textContent = proveedorData[value].sensibles;
+        document.getElementById("ubicacion-info").textContent = proveedorData[value].ubicacion;
+      } else {
+        // Si no hay selección, se reinician los valores
+        document.getElementById("region-info").textContent = "-";
+        document.getElementById("sensibles-info").textContent = "-";
+        document.getElementById("ubicacion-info").textContent = "-";
+      }
+    });
+
+    let contadorUsuarios = 1; // contador para nombres de inputs
+
+    document.getElementById("agregar-usuario").addEventListener("click", function () {
+      const tabla = document.getElementById("tabla-partes").querySelector("tbody");
+
+      const fila = document.createElement("tr");
+      fila.innerHTML = `
+        <td>
+          <input type="text" class="form-control form-control-sm" name="usuarios[${contadorUsuarios}][nombre]" placeholder="Nombre y correo" required>
+        </td>
+        <td>
+          <select class="form-select form-select-sm" name="usuarios[${contadorUsuarios}][rol]" required>
+            <option value="Cliente">Cliente</option>
+            <option value="Proveedor">Proveedor</option>
+          </select>
+        </td>
+        <td>
+          <button type="button" class="btn btn-sm btn-danger eliminar-fila"><i class="bi bi-trash"></i></button>
+        </td>
+      `;
+      tabla.appendChild(fila);
+      contadorUsuarios++;
+    });
+
+    // Delegación de eventos para eliminar filas
+    document.getElementById("tabla-partes").addEventListener("click", function (e) {
+      if (e.target.closest(".eliminar-fila")) {
+        e.target.closest("tr").remove();
+      }
+    });
+  </script> 
+</body>
 </html>

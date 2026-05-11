@@ -1,5 +1,4 @@
 <?php
-
 require_once "conexionBD.php";
 
 class Usuario {
@@ -11,7 +10,9 @@ class Usuario {
     }
 
     public function verificarUsuario($email, $password) {
-        $query = "SELECT contraseña_usuario FROM usuarios WHERE email_usuario = :email";
+        $query = "SELECT id_usuario, email_usuario, contraseña_usuario 
+                  FROM usuarios 
+                  WHERE email_usuario = :email";
         $stmt = $this->conn->prepare($query);
         $stmt->bindParam(":email", $email);
         $stmt->execute();
@@ -19,7 +20,8 @@ class Usuario {
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
         if ($usuario && password_verify($password, $usuario["contraseña_usuario"])) {
-            return true;
+            // Retornamos todo el registro para usar id_usuario en sesión
+            return $usuario;
         }
         return false;
     }
